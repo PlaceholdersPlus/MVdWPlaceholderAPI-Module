@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+group = 'me.vankka.placeholdersplus.module'
+version = '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    maven { url 'http://repo.mvdw-software.be/content/groups/public/' }
+}
+
+dependencies {
+    compile 'com.github.Vankka.PlaceholdersPlus:placeholdersplus-common:8ad5635eb4'
+    compile 'org.bukkit:bukkit:1.13.2-R0.1-SNAPSHOT'
+
+    compile('be.maximvdw:MVdWPlaceholderAPI:2.5.2-SNAPSHOT') { exclude module: 'spigot' }
+}
